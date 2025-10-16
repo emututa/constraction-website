@@ -253,11 +253,11 @@ export default function ProjectsPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-[#0E3998] h-[500px] relative">
-        <div className="relative z-10 mx-20 justify-center pt-50">
-          <div className="w-[50px] h-[5px] bg-white/30 mb-6"></div>
+      <section className="bg-[#0E3998] h-[300px] sm:h-[400px] md:h-[500px] relative">
+        <div className="relative z-10 mx-4 sm:mx-10 md:mx-20 justify-center pt-20 sm:pt-30 md:pt-50">
+          <div className="w-[40px] sm:w-[50px] h-[5px] bg-white/30 mb-4 sm:mb-6"></div>
           <h1
-            className="text-[80px] font-extrabold text-white"
+            className="text-[48px] sm:text-[64px] md:text-[80px] font-extrabold text-white"
             style={{ fontFamily: "'Archivo Black', sans-serif" }}
           >
             PROJECTS
@@ -266,30 +266,30 @@ export default function ProjectsPage() {
       </section>
 
       {/* Our Work Section */}
-      <section className="py-20 flex justify-center  bg-white">
-        <div className="max-w-7xl  px-4">
-        <div className="flex">
-          <div className=" mr-[38px] ml-[45px] ">
-            <div className="mb-8">
+      <section className="py-12 sm:py-16 md:py-20 flex justify-center bg-white">
+        <div className="max-w-7xl px-2 sm:px-4">
+        <div className="flex flex-col lg:flex-row">
+          <div className="mr-0 lg:mr-[38px] ml-0 lg:ml-[45px] mb-6 lg:mb-0">
+            <div className="mb-6 sm:mb-8">
             <h2
-              className="text-[60px] font-extrabold text-[#0E3998]"
+              className="text-[36px] sm:text-[48px] md:text-[60px] font-extrabold text-[#0E3998]"
               style={{ fontFamily: "'Archivo Black', sans-serif" }}
             >
               OUR WORK
             </h2>
-            <div className="w-[60px] h-[6px] bg-[#FFBC01] mt-4 mb-1"></div>
+            <div className="w-[50px] sm:w-[60px] h-[6px] bg-[#FFBC01] mt-3 sm:mt-4 mb-1"></div>
           </div>
-          <Image src={tim} alt="white house" className="w-[600px] h-200"/>
+          <Image src={tim} alt="white house" className="w-full max-w-[600px] h-auto lg:h-200"/>
           </div>
-            
-            <div className="flex flex-col w-[600px]">
-              <Image src={blue} alt="" className="my-5 w-[530px]" />
-             <Image src={cha} alt="" className=" w-[530px]"/>
-             <p className="font-extrabold text-[#0E3998] text-[26px] mb-[20px] mt-[30px]" style={{fontFamily:"'Archivo Black',sans-serif"}}>ICULIS POSUERE PROIDENT VERO QUAERAT EXERCITATION!</p>
-             <p className="text-[16px] text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Corporis suscipit gravida quisquam ultrices omnis et dolorem.</p>
-             <button className="bg-[#FFBC01] text-white text-[15px] w-[200px] font-bold py-[15px] px-[30px] hover:bg-[#e5aa00] transition-colors mt-5">
-              GET A QUOTE
-             </button>
+
+            <div className="flex flex-col w-full lg:w-[600px] mt-6 lg:mt-0">
+              <Image src={blue} alt="" className="my-3 sm:my-5 w-full max-w-[530px]" />
+             <Image src={cha} alt="" className="w-full max-w-[530px]"/>
+              <p className="font-extrabold text-[#0E3998] text-[20px] sm:text-[24px] md:text-[26px] mb-[15px] sm:mb-[20px] mt-[20px] sm:mt-[30px]" style={{fontFamily:"'Archivo Black',sans-serif"}}>ICULIS POSUERE PROIDENT VERO QUAERAT EXERCITATION!</p>
+              <p className="text-[14px] sm:text-[16px] text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Corporis suscipit gravida quisquam ultrices omnis et dolorem.</p>
+              <button className="bg-[#FFBC01] text-white text-[14px] sm:text-[15px] w-[180px] sm:w-[200px] font-bold py-[12px] sm:py-[15px] px-[25px] sm:px-[30px] hover:bg-[#e5aa00] transition-colors mt-4 sm:mt-5">
+               GET A QUOTE
+              </button>
             </div>
 
        </div>
@@ -298,30 +298,30 @@ export default function ProjectsPage() {
       </section>
 
 
-       <section className="bg-[#FFBC01] py-12">
-              <div className="max-w-7xl mx-auto px-4">
-                <div className="flex flex-wrap justify-center items-center gap-0.5 ">
-                  <Image src={buil} alt=""  className="w-45 h-30    border-x-2 border-white/30"/>
-                  <Image src={buit} alt=""  className="w-45 h-30     border-x-2 border-white/30"/>
-                  <Image src={stract} alt=""  className="w-45 h-30    border-x-2 border-white/30"/>
-                  <Image src={general} alt="" className="w-45 h-30    border-x-2 border-white/30" />
-                  <Image src={webui} alt="" className="w-45 h-30      border-x-2 border-white/30" />
-                </div>
-              </div>
-        </section>
+       <section className="bg-[#FFBC01] py-8 sm:py-12">
+             <div className="max-w-7xl mx-auto px-2 sm:px-4">
+               <div className="flex flex-wrap justify-center items-center gap-1 sm:gap-0.5">
+                 <Image src={buil} alt=""  className="w-20 sm:w-30 md:w-35 lg:w-45 h-12 sm:h-20 md:h-25 lg:h-30    border-x-2 border-white/30"/>
+                 <Image src={buit} alt=""  className="w-20 sm:w-30 md:w-35 lg:w-45 h-12 sm:h-20 md:h-25 lg:h-30     border-x-2 border-white/30"/>
+                 <Image src={stract} alt=""  className="w-20 sm:w-30 md:w-35 lg:w-45 h-12 sm:h-20 md:h-25 lg:h-30    border-x-2 border-white/30"/>
+                 <Image src={general} alt="" className="w-20 sm:w-30 md:w-35 lg:w-45 h-12 sm:h-20 md:h-25 lg:h-30    border-x-2 border-white/30" />
+                 <Image src={webui} alt="" className="w-20 sm:w-30 md:w-35 lg:w-45 h-12 sm:h-20 md:h-25 lg:h-30      border-x-2 border-white/30" />
+               </div>
+             </div>
+       </section>
 
       {/* Ongoing Projects Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 flex py-14">
-          <div className="mb-12 w-[350px] mx-15">
-            
-            <h2 className="text-[60px] font-extrabold text-[#0E3998]" style={{fontFamily:"'Archivo Black',sans-serif"}}>
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 flex flex-col lg:flex-row py-8 sm:py-12 md:py-14">
+          <div className="mb-8 sm:mb-10 md:mb-12 w-full lg:w-[350px] mx-0 lg:mx-15">
+
+            <h2 className="text-[36px] sm:text-[48px] md:text-[60px] font-extrabold text-[#0E3998]" style={{fontFamily:"'Archivo Black',sans-serif"}}>
               OUR ONGOING PROJECT <span> S</span>
             </h2>
-            <div className="w-[60px] h-[5px] bg-[#FFBC01] mb-6"></div>
+            <div className="w-[50px] sm:w-[60px] h-[5px] bg-[#FFBC01] mb-4 sm:mb-6"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
             <ProjectCard
               title="NEQUE ALIQUET"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
@@ -333,7 +333,7 @@ export default function ProjectsPage() {
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
               image={light}
               titleSize = "26px"
-              
+
             />
           </div>
         </div>
@@ -358,25 +358,25 @@ function ProjectCard({
 }) {
   return (
   // <div className="bg-white">
-     <div className="w-[350px]">
+     <div className="w-full max-w-[350px] mx-auto">
       <Image
         src={image || "/placeholder.svg"}
         alt={title}
-        className="w-[350px] h-[400px] object-cover"
+        className="w-full h-[300px] sm:h-[350px] md:h-[400px] object-cover"
       />
-      <div className="p-6">
-        <h3 className="text-[22px] font-extrabold text-[#0E3998] mb-3" style={{fontFamily:"'Archivo Black',sans-serif"}}>{title}</h3>
-        <p className="text-gray-400 text-[16px] leading-relaxed mb-4">
+      <div className="p-4 sm:p-6">
+        <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-extrabold text-[#0E3998] mb-2 sm:mb-3" style={{fontFamily:"'Archivo Black',sans-serif"}}>{title}</h3>
+        <p className="text-gray-400 text-[14px] sm:text-[16px] leading-relaxed mb-3 sm:mb-4">
           {description}
         </p>
-        <button className="flex items-center gap-2 text-[14px] text-[#0E3998]  hover:text-[#FFBC01] transition-colors">
-          <span className="w-4 h-4 rounded-full border-2 border-current flex items-center justify-center">
-            <FaArrowRight className="w-[10px] h-[10px]"/>
+        <button className="flex items-center gap-2 text-[13px] sm:text-[14px] text-[#0E3998] hover:text-[#FFBC01] transition-colors">
+          <span className="w-3 sm:w-4 h-3 sm:h-4 rounded-full border-2 border-current flex items-center justify-center">
+            <FaArrowRight className="w-[8px] sm:w-[10px] h-[8px] sm:h-[10px]"/>
           </span>
           Know More
         </button>
       </div>
-     </div> 
+     </div>
     // { </div> }
   );
 }
