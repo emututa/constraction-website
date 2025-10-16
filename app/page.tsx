@@ -275,14 +275,14 @@ function ServiceCard({
 }) {
   return (
     <div className="bg-white hover:border-none border-1 border-gray-200 px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-12 overflow-hidden hover:shadow-lg transition-shadow  ">
-      <div className="relative w-60 sm:w-70 md:w-75 h-40 sm:h-50 md:h-55 ">
+      <div className="relative w-90 sm:w-70 md:w-75 h-60 sm:h-50 md:h-55 ">
         <Image src={image} alt={title} fill className="object-cover" sizes="100vw" />
       </div>
         <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-extrabold text-[#0E3998] mb-2 sm:mb-3 " style={{ fontFamily: "'Archivo Black', sans-serif" }} >{title}</h3>
-         <div className="relative bottom-5 sm:bottom-7 w-80 sm:w-90 md:w-100 h-1  ">
+         <div className="relative bottom-5 sm:bottom-7 w-90 sm:w-90 md:w-100 h-1  ">
         <Image src={pic} alt={title}   className="object-cover "   />
          </div>
-        <p className="text-gray-500 text-[14px] sm:text-[16px] mb-3 sm:mb-4  mt-[15px] sm:mt-[20px]">{description}</p>
+        <p className="text-gray-500 text-[16px] sm:text-[16px] mb-3 sm:mb-4  mt-[15px] sm:mt-[20px]">{description}</p>
         <button className="text-[#0E3998] font-bold hover:text-[#FFBC01] transition-colors"><FaPlus/></button>
 
     </div>

@@ -8,11 +8,11 @@ export default function ContactPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-[#0E3998] h-[250px] sm:h-[300px] md:h-[400px] w-full flex justify-center items-center relative overflow-hidden">
+      <section className="bg-[#0E3998] h-[250px] sm:h-[300px] md:h-[500px] w-full flex items-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920')] bg-cover bg-center opacity-20"></div>
-        <div className="relative z-10">
-          <div className="w-[50px] sm:w-[60px] h-[5px] bg-white/30 mx-auto mb-4 sm:mb-6"></div>
-          <h1 className="text-[32px] sm:text-[40px] md:text-[50px] font-extrabold text-white text-center">CONTACT</h1>
+        <div className="relative z-10 mx-23">
+          <div className="w-[50px] sm:w-[50px] h-[5px] bg-white/30  mb-4 sm:mb-6"></div>
+          <h1 className="text-[32px] sm:text-[40px] md:text-[60px] font-extrabold text-white text-center" style={{ fontFamily: "'Archivo Black', sans-serif" }}>CONTACT</h1>
         </div>
       </section>
 
