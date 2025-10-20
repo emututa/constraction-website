@@ -17,7 +17,7 @@ export default function ServicesPage() {
     <main>
       {/* Hero Section */}
       <section className=" bg-[#0E3998]  h-[500px] w-full  relative overflow-hidden">
-        <div className="absolute inset-0  bg-cover bg-center opacity-15" style={{backgroundImage:"url('project.png')"}} ></div>
+        <div className="absolute inset-0  bg-cover bg-center opacity-20" style={{backgroundImage:"url('project.png')"}} ></div>
         <div className="relative z-10 mt-40 mx-17">
           <div className="w-[40px] h-[5px] bg-white/30  mb-6"></div>
           <h1 className="text-[50px] font-extrabold text-white "   style={{ fontFamily: "'Archivo Black', sans-serif" }}>SERVICES</h1>

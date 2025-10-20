@@ -3,8 +3,9 @@
 "use client";
 
 import Link from "next/link";
+import { Footer } from "@/components/footer"
 import Image, { StaticImageData } from "next/image";
-import { FaYelp, FaFacebook, FaTwitter, FaHouzz, FaPlus, FaStar, FaMedal,FaUserTie,FaBuilding,FaQuoteLeft,FaPhoneAlt,FaEnvelope, FaMapMarker, } from "react-icons/fa";
+import { FaYelp, FaFacebook, FaTwitter, FaHouzz, FaPlus, FaStar, FaMedal,FaUserTie,FaBuilding,FaQuoteLeft, } from "react-icons/fa";
 import write from "@/public/write.png";
 import wire from "@/public/fence.png";
 import team from "@/public/team.png";
@@ -20,12 +21,6 @@ import buit from "@/public/buildit.png";
 import stract from "@/public/const.png";
 import general from "@/public/general.png";
 import webui from "@/public/webuild.png";
-import log from "@/public/logo.png"
-import wire2 from "@/public/wire2.png"
-import bb from "@/public/bbb.png"
-import best from "@/public/best.png"
-import top from "@/public/top.png"
-import peo from "@/public/people.png"
 
 
 
@@ -158,9 +153,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-2 sm:px-4">
           <div className=" flex flex-col items-center mb-6 sm:mb-8 md:mb-12">
             <h2 className="text-[24px] sm:text-[32px] md:text-[42px] font-extrabold text-[#0E3998]" style={{ fontFamily: "'Archivo Black', sans-serif" }}>OUR HAPPY CLIENTS!</h2>
-            <div className="w-[40px] sm:w-[50px] h-[3px] bg-[#0E3998]"></div>
+            <div className="w-[40px] my-[30px] sm:w-[50px] h-[3px] bg-[#0E3998]"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 overflow-hidden  sm:gap-6 md:gap-8">
             <TestimonialCard
               quote="Elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Nam varius consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elelit tellus."
               name="JEMMA STONE"
@@ -204,7 +199,7 @@ export default function HomePage() {
             <h2 className="text-[24px] sm:text-[32px] md:text-[42px] font-extrabold text-white">WHY US?</h2>
             <div className="bg-[#FFBC01] w-[50px] sm:w-[60px] h-[5px] mx-auto mt-3 sm:mt-4"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-35">
             <FeatureCard
               icon={FaMedal}
               title="20+ YEARS EXPERIENCE"
@@ -301,15 +296,15 @@ function TestimonialCard({
   customer: string | StaticImageData,
 }) {
   return (
-    <div className="bg-white  py-4 sm:py-5 px-4 sm:px-6 md:px-9 rounded-[7px] hover:shadow-lg transition-shadow ">
+    <div className="bg-white ml-7  py-6 w-[345px] sm:py-5 px-4 sm:px-6 md:px-9 rounded-[7px] hover:shadow-lg transition-shadow ">
       <div className="text-[#001A3D] text-2xl sm:text-3xl mb-3 sm:mb-4"><FaQuoteLeft/></div>
-      <p className="text-gray-500 text-[14px] sm:text-[16px]  mb-3 sm:mb-4 ">{quote}</p>
+      <p className="text-gray-500 text-[14px] sm:text-[16px] leading-[25px] mb-3 sm:mb-4 ">{quote}</p>
       <div className="flex  gap-[1px] mb-4 sm:mb-5">
         {[...Array(rating)].map((_, i) => (
           <FaStar key={i} className="w-3 sm:w-4 h-3 sm:h-4 text-[#FFBC01]" />
         ))}
       </div>
-      <div className="w-full h-[1px] bg-black/5 mb-4 sm:mb-5"></div>
+      <div className="w-full h-[1px] bg-black/5 mb-[15px] sm:mb-5"></div>
       <div className=" flex mb-3 sm:mb-4">
         <Image src={customer} alt={name} width={50} height={50} className="rounded-full sm:w-[60px] sm:h-[60px]" />
       <p className="font-bold text-[#0E3998] text-[14px] sm:text-[16px] mx-[10px] sm:mx-[15px]" style={{fontFamily:"'Archivo', sans-serif"}}>{name}</p>
@@ -334,96 +329,9 @@ function FeatureCard({
         <Icon className=" text-[#FFBC01] w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8" />
       </div>
       <h3 className="text-[18px] sm:text-[21px] md:text-[23px] font-extrabold text-white mb-3 sm:mb-4" style={{fontFamily:"'Archivo Black',sans-serif"}}>{title}</h3>
-      <p className="text-gray-400 text-[14px] sm:text-[16px] md:text-[17px] ">{description}</p>
+      <p className="text-gray-400 text-[14px] sm:text-[16px] md:text-[18px] ">{description}</p>
     </div>
   );
 }
-
-
-
-function Footer() {
-  return (
-    <footer className="bg-[#001a3d] text-white py-12 sm:py-16 md:py-20 lg:py-30">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-10 md:mb-12">
-          {/* Logo and Contact */}
-          <div>
-            <div className="mb-4 sm:mb-6">
-              <Link href="/#">
-              <Image src={log} alt="logo" width={120} height={120} className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px]"/>
-              </Link>
-
-            </div>
-            <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-              <div className="flex items-center">
-                  <FaPhoneAlt className="mx-1 sm:mx-2 text-[#FFBC01] text-sm sm:text-base"/>
-              <Link href="tel:+26377187003"><p className="text-xs sm:text-sm">+263 777 187 003</p></Link>
-              </div>
-
-             <div className="flex items-center">
-              <FaEnvelope className="mx-1 sm:mx-2 text-[#FFBC01] text-sm sm:text-base"/>
-              <p className="text-xs sm:text-sm">contact@site.com</p>
-             </div>
-
-              <div className="flex flex-col sm:flex-row sm:items-center">
-                <FaMapMarker className="mx-1 sm:mx-2 text-[#FFBC01] text-sm sm:text-base mb-1 sm:mb-0"/>
-              <p className="text-xs sm:text-sm">123 Fifth Avenue,</p>
-              <p className="text-xs sm:text-sm ml-0 sm:ml-6">New York, NY 10160</p>
-
-              </div>
-
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-base sm:text-lg font-bold mb-4">OUR SERVICES</h3>
-            <Image src={wire2} alt="fence" width={100} height={160} className="w-[100px] h-[160px] sm:w-[130px] sm:h-[200px] mb-4 sm:mb-6 object-cover" />
-            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
-              {[
-                "General Contract",
-                "Project Planning",
-                "House Refurbishment",
-                "Kitchen Remodeling",
-                "Interior Design",
-                "House Extension",
-              ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="hover:text-[#FFBC01] transition-colors">
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* About */}
-          <div>
-            <h3 className="text-base sm:text-lg font-bold mb-4">A FEW WORDS ABOUT US</h3>
-            <Image src={wire} alt="fence" width={200} height={160} className="w-[200px] h-[160px] sm:w-[280px] sm:h-[200px] mb-4 sm:mb-6 object-cover" />
-            <p className="text-xs sm:text-sm leading-relaxed mb-4 sm:mb-6">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-            </p>
-            <div className="flex gap-2 sm:gap-4">
-            <Image src={bb} alt="" width={50} height={50} className="w-[50px] h-[50px] sm:w-[70px] sm:h-[70px]" />
-            <Image src={best} alt="" width={50} height={50} className="w-[50px] h-[50px] sm:w-[70px] sm:h-[70px]" />
-            <Image src={top} alt="" width={50} height={50} className="w-[50px] h-[50px] sm:w-[70px] sm:h-[70px]" />
-            <Image src={peo} alt="" width={50} height={50} className="w-[50px] h-[50px] sm:w-[70px] sm:h-[70px]" />
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-white/10 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-white/60">
-          <p>Copyright © 2025 Construction | Powered by Construction</p>
-        </div>
-      </div>
-    </footer>
-  );
-}
-
-
-
-
-
-
 
 
